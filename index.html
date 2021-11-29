@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="client/index.css">
+    <script src="client/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Home Price Predictor</title>
+</head>
+<body>
+   
+    <nav id="navbar">
+        <ul>
+            
+            <li><a href="/">Home</a></li>
+            <li><a href="/client/about.html">About</a></li>
+        </ul>
+    </nav>
+    <div class="cont">
+
+    
+    <h1 id="head">House Price Predictor</h1>
+    <h3 id="ap">
+        Estimated Price:  <span id="price"></span>
+    </h3>
+    <form  id="form">
+        <input type="text" name="total_sqft" id="total_sqft" placeholder="Enter Total Square Feet Area" required>
+        <input type="text" name="bhk" id="bhk" placeholder="Enter Number of Bedrooms" required>
+        <input type="text" name="bath" id="bath" placeholder="Enter Number of Bathrooms" required>
+        <select name="location" id="location" onclick="loadLocation()" required>
+            <option value="">Select Location</option>
+            
+        </select>
+       
+
+            <button type="button" id="btn" onclick="getPrice()">
+                Predict
+            </button >
+            <button type="button" id="btn" onclick="clearPrice()">
+                Clear 
+            </button >
+        
+    </form>
+    
+    
+</div>
+</body>
+</html>
